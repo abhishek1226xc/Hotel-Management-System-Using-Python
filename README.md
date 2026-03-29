@@ -1,4 +1,4 @@
-# Beyond Booking 2.0 - Hotel Management System
+# Hotel Management Sytem
 
 A full-stack hotel management application for room search, booking flow, and operational management.
 

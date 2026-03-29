@@ -1,16 +1,16 @@
 #!/bin/bash
 
-# Beyond Booking 2.0 Project Setup Script
-# This script creates the entire project structure for the Beyond Booking hotel management system
+# Hotel Management Sytem Project Setup Script
+# This script creates the entire project structure for the Hotel Management Sytem project
 
-echo "Setting up Beyond Booking 2.0 project structure..."
+echo "Setting up Hotel Management Sytem project structure..."
 
 # Create root project directory
-mkdir -p Beyond-Booking-2.0
-cd Beyond-Booking-2.0
+mkdir -p Hotel-Management-Sytem
+cd Hotel-Management-Sytem
 
 # Create README and other root files
-echo "# Beyond Booking 2.0: BST in Hotel Management" > README.md
+echo "# Hotel Management Sytem" > README.md
 echo "node_modules/" > .gitignore
 echo "{}" > package.json
 
@@ -23,7 +23,7 @@ mkdir -p frontend/src/store/{reducers,actions}
 echo "/* Tailwind CSS imports and custom styles */" > frontend/src/styles/index.css
 echo "import React from 'react';" > frontend/src/index.js
 echo "module.exports = { content: ['./src/**/*.{js,jsx}'], theme: {}, plugins: [] }" > frontend/tailwind.config.js
-echo "{\"name\": \"beyond-booking-frontend\", \"version\": \"1.0.0\"}" > frontend/package.json
+echo "{\"name\": \"hotel-management-sytem-frontend\", \"version\": \"1.0.0\"}" > frontend/package.json
 
 # Backend structure
 mkdir -p backend/{src,config,tests}
@@ -38,7 +38,7 @@ touch backend/src/services/{roomService.js,bookingService.js,pricingService.js,r
 cat > backend/src/models/bst/BSTNode.js << EOF
 /**
  * Binary Search Tree Node implementation
- * for Beyond Booking Hotel Management System
+ * for Hotel Management Sytem
  */
 class BSTNode {
   constructor(key, value = null) {
@@ -56,7 +56,7 @@ EOF
 cat > backend/src/models/bst/BinarySearchTree.js << EOF
 /**
  * Binary Search Tree implementation
- * for Beyond Booking Hotel Management System
+ * for Hotel Management Sytem
  */
 const BSTNode = require('./BSTNode');
 
@@ -114,7 +114,7 @@ EOF
 cat > backend/src/models/bst/AVLTree.js << EOF
 /**
  * AVL Tree implementation (self-balancing BST)
- * for Beyond Booking Hotel Management System
+ * for Hotel Management Sytem
  */
 const BSTNode = require('./BSTNode');
 
@@ -300,7 +300,7 @@ EOF
 touch backend/src/api/routes/{bookingRoutes.js,roomRoutes.js,guestRoutes.js,adminRoutes.js,maintenanceRoutes.js}
 
 # Create basic backend config
-echo "{\"name\": \"beyond-booking-backend\", \"version\": \"1.0.0\"}" > backend/package.json
+echo "{\"name\": \"hotel-management-sytem-backend\", \"version\": \"1.0.0\"}" > backend/package.json
 echo "PORT=4000\nDB_CONNECTION_STRING=postgresql://postgres:password@localhost:5432/beyond_booking" > backend/.env.example
 
 # Create app.js
@@ -342,7 +342,7 @@ const app = require('./app');
 const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
-  console.log(\`Beyond Booking server running on port \${port}\`);
+  console.log(\`Hotel Management Sytem server running on port \${port}\`);
 });
 EOF
 
@@ -452,7 +452,7 @@ EOF
 
 echo "Project structure setup complete!"
 echo "To initialize the project:"
-echo "1. cd Beyond-Booking-2.0"
+echo "1. cd Hotel-Management-Sytem"
 echo "2. cd frontend && npm install"
 echo "3. cd ../backend && npm install"
 echo "4. Create PostgreSQL database using database/setup.sql"ch
