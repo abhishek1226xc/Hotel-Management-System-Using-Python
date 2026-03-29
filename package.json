@@ -1,7 +1,7 @@
 {
   "name": "project25",
   "version": "1.0.0",
-  "description": "",
+  "description": "Hotel Management Sytem is a full-stack platform for room search, booking management, and pricing operations.",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"

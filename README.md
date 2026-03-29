@@ -1,5 +1,9 @@
 # Hotel Management Sytem
 
+## Description
+
+Hotel Management Sytem is a full-stack hotel operations platform for managing room listings, guest bookings, and pricing with a Node.js backend and PostgreSQL data storage.
+
 A full-stack hotel management application for room search, booking flow, and operational management.
 
 ## Tech Stack
